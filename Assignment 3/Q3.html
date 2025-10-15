@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Course Registration Form</title>
+    <!-- Structure only: fieldset, legend, select, inputs, and schedule table -->
+</head>
+<body>
+    <h1>Course Registration</h1>
+
+    <form>
+        <fieldset>
+            <legend>Student Details</legend>
+            <label>
+                Full Name:
+                <input type="text" name="name" placeholder="Your full name">
+            </label>
+            <br><br>
+            <label>
+                Email:
+                <input type="email" name="email" placeholder="you@example.com">
+            </label>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Course Selection</legend>
+            <label>
+                Select Course:
+                <select name="course">
+                    <option value="web">Web Development</option>
+                    <option value="ml" selected>Machine Learning</option>
+                    <option value="db">Databases</option>
+                </select>
+            </label>
+        </fieldset>
+    </form>
+
+    <h2>Available Schedules</h2>
+    <table border="1" cellpadding="6">
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>Time</th>
+                <th>Instructor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Monday</td>
+                <td>10:00 - 12:00</td>
+                <td>Prof. Sharma</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>14:00 - 16:00</td>
+                <td>Dr. Rao</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
