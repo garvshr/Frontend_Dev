@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.heroSection {
+    background-color: #C2EFD4;
+}
+
+.navbar {
+    padding: 32px;
+    display: flex;
+    justify-content: space-around;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    gap: 32px;
+    
+}
+.navbarList {
+    
+}
+
+.heroLogo {
+    font-size: large;
+}
+
+.rightNavbar {
+    display: flex;
+    gap: 32px;
+}
+
+.main {
+    display: flex;
+    justify-content: space-around;
+}
+
+.rightMain img{
+    height: 200px;
+}
