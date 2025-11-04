@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q3: Gradients</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+        }
+        header {
+            position: fixed; 
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            text-align: center;
+            padding: 1rem 0;
+            z-index: 10; 
+        }
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            text-align: center;
+            padding: 0.5rem 0;
+            z-index: 10;
+        }
+        main {
+            padding-top: 70px;
+            padding-bottom: 50px; 
+        }
+        .gradient-section {
+            height: 100vh;
+            padding: 2rem;
+            box-sizing: border-box; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .linear-fixed {
+            background: linear-gradient(135deg, #0072ff, #00c6ff);
+                        background-attachment: fixed;
+        }
+        .radial {
+            background: radial-gradient(circle, #ff512f, #dd2476);
+                        background-attachment: scroll;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Gradient Showcase</h1>
+    </header>
+
+    <main>
+        <section class="gradient-section linear-fixed">
+            <h2>Linear Gradient (with Fixed Attachment)</h2>
+            <p>This background is fixed, creating a parallax-like effect when you scroll.</p>
+        </section>
+        
+        <section class="gradient-section radial">
+            <h2>Radial Gradient</h2>
+            <p>This background is a standard radial gradient and scrolls with the content.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Fixed Footer</p>
+    </footer>
+</body>
+</html>

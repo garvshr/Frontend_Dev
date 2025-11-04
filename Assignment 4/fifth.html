@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q5: Advanced Selectors</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            padding: 1rem;
+        }
+        main {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap; 
+        }
+        div {
+            flex: 1;
+            min-width: 300px;
+        }
+        .descendant div p {
+            color: #007bff; 
+        }
+        .child ul > li {
+            font-weight: bold;
+        }
+        .adjacent h4 + p {
+            font-style: italic;
+            color: #d9534f;
+        }
+        .general h5 ~ p {
+            background-color: #f0f0f0;
+        }
+        .pseudo-class a:hover {
+            color: white;
+            background-color: #333;
+        }
+        .pseudo-class input:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0,123,255,0.5);
+            outline: none;
+        }
+        .pseudo-class ol li:nth-child(odd) {
+            background-color: #e9f5ff; 
+        }
+        .pseudo-class ol li:nth-child(even) {
+            background-color: #fff8e9; }
+        .attribute a[href^="https"]::before {
+            content: "🔒 "; 
+        }
+        .attribute a[href^="http"]::after {
+            content: " (insecure)";
+            color: red;
+            font-size: 0.8em;
+        }
+        .intro::first-letter {
+            font-size: 2.5em;
+            font-weight: bold;
+            float: left;
+            padding-right: 5px;
+            color: #5cb85c; 
+        }
+        .intro::first-line {
+            font-weight: bold;
+        }
+
+
+                [href^="https"] {
+            color: #5cb85c;
+        }
+        [type="text"] {
+            border: 2px solid #ccc;
+            border-radius: 4px;
+        }
+        [type="button"] {
+            background-color: #f0ad4e;
+            border: none;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Advanced CSS Selectors</h1>
+    </header>
+    <main>
+        <div class="combinators">
+            <h2>Combinators</h2>
+            
+            <section class="descendant">
+                <h3>Descendant (space)</h3>
+                <div><p>This 'p' is a descendant (inside a div).</p></div>
+                <p>This 'p' is not.</p>
+            </section>
+            
+            <section class="child">
+                <h3>Child (>)</h3>
+                <ul>
+                    <li>Direct child 'li'</li>
+                    <li>Direct child 'li'</li>
+                    <div><li>This 'li' is NOT a direct child.</li></div>
+                </ul>
+            </section>
+            
+            <section class="adjacent">
+                <h3>Adjacent Sibling (+)</h3>
+                <h4>Title</h4>
+                <p>This 'p' is directly after the h4.</p>
+                <p>This 'p' is not.</p>
+            </section>
+
+            <section class="general">
+                <h3>General Sibling (~)</h3>
+                <h5>Title</h5>
+                <div>A div</div>
+                <p>This 'p' is a general sibling.</p>
+                <p>This 'p' is also a general sibling.</p>
+            </section>
+        </div>
+
+        <div class="pseudo-attribute">
+            <h2>Pseudo & Attribute Selectors</h2>
+            
+            <section class="pseudo-class">
+                <h3>Pseudo-Classes</h3>
+                <ol>
+                    <li>First Item</li>
+                    <li>Second Item</li>
+                    <li>Third Item (odd)</li>
+                    <li>Fourth Item (even)</li>
+                    <li>Fifth Item</li>
+                </ol>
+                <a href="#">Hover over me</a>
+                <input type="text" placeholder="Focus on me">
+            </section>
+
+            <section class="pseudo-element">
+                <h3>Pseudo-Elements</h3>
+                <p class="intro">This is an introductory paragraph. The first line and first letter will be styled. Lorem ipsum dolor sit amet consectetur.</p>
+            </section>
+
+            <section class="attribute">
+                <h3>Attribute Selectors</h3>
+                <a href="https://google.com">Secure Link (https)</a>
+                <br>
+                <a href="http://example.com">Insecure Link (http)</a>
+                <br>
+                <input type="text" value="Text input">
+                <input type="button" value="Button input">
+            </section>
+        </div>
+    </main>
+</body>
+</html>
