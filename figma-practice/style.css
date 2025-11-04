@@ -1,0 +1,101 @@
+.main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.heroBox {
+    height: 500px;
+    width: 400px;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.upperBox {
+    height: 200px;
+    width: 300px;
+    background-color: pink;
+    border-radius: 20px;
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.upper {
+    height: 100px;
+    width: 200px;
+    background-color: white;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.centreBox {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.box1 {
+    height: 100px;
+    width: 90px;
+    background-color: brown;
+    border-radius: 12px;
+}
+.box2 {
+    height: 100px;
+    width: 90px;
+    background-color: navy;
+    border-radius: 12px;
+}
+.box3 {
+    height: 100px;
+    width: 90px;
+    background-color: gray;
+    border-radius: 12px;
+}
+
+.bottomBox {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.up {
+    height: 40px;
+    width: 150px;
+    background-color: white;
+    border-radius: 16px;
+    margin-bottom: 20px;
+}
+
+.low {
+    display: flex;
+    gap: 40px;
+}
+
+.low1 {
+    height: 40px;
+    width: 70px;
+    background-color: white;
+    border-radius: 16px;
+}
+.low2 {
+    height: 40px;
+    width: 70px;
+    background-color: white;
+    border-radius: 16px;
+}
+.low3 {
+    height: 40px;
+    width: 70px;
+    background-color: white;
+    border-radius: 16px;
+}
