@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    background: #f7fafc;
+    color: #111
+}
+
+header,
+footer {
+    padding: 16px 24px;
+    background: #0f172a;
+    color: #fff
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.5rem
+}
+
+main {
+    padding: 24px
+}
+
+.effects {
+    display: flex;
+    gap: 16px;
+    justify-content: space-evenly;
+    flex-wrap: wrap
+}
+
+.fx {
+    padding: 12px 18px;
+    border-radius: 12px;
+    border: 1px solid #cbd5e1;
+    background: #fff;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, .08);
+    transition: transform .2s ease, box-shadow .2s ease, background .2s ease, color .2s ease;
+    cursor: pointer
+}
+
+.fx:hover {
+    transform: scale(1.05);
+    background: #2563eb;
+    color: #fff;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, .12)
+}
+
+.fx:active {
+    transform: scale(1.02)
+}
+
+.fx:focus {
+    outline: 3px solid #93c5fd;
+    outline-offset: 2px
+}

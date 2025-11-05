@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    line-height: 1.5;
+    color: #222;
+    background: #f6f7fb
+}
+
+header,
+footer {
+    padding: 16px 24px;
+    background: #0f172a;
+    color: #fff
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.5rem
+}
+
+main {
+    padding: 24px
+}
+
+.row {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .06);
+    padding: 16px;
+    flex: 1;
+    min-width: 260px
+}
+
+.demo-link,
+.demo-btn {
+    display: inline-block;
+    margin: 8px 8px 0 0;
+    text-decoration: none;
+    background: #2563eb;
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: .2s ease
+}
+
+.demo-link:hover,
+.demo-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px)
+}
+
+.demo-link:focus,
+.demo-btn:focus {
+    outline: 3px solid #93c5fd;
+    outline-offset: 2px
+}
+
+.demo-btn:active,
+.demo-link:active {
+    background: #1e40af;
+    transform: scale(.98)
+}
+
+.demo-input {
+    display: block;
+    width: 100%;
+    max-width: 220px;
+    margin-top: 8px;
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    transition: border-color .2s ease, box-shadow .2s ease
+}
+
+.demo-input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, .25);
+    outline: 0
+}
+
+.demo-list {
+    margin: 8px 0 0 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap
+}
+
+.demo-list li {
+    padding: 8px 12px;
+    border-radius: 8px;
+    background: #e5e7eb
+}
+
+.hover-list li:hover {
+    background: #d1d5db
+}
+
+.nth-list li:nth-child(odd) {
+    background: #d1fae5
+}
+
+.nth-list li:nth-child(3) {
+    background: #fde68a
+}
+
+@media (max-width:700px) {
+    .row {
+        flex-direction: column
+    }
+}

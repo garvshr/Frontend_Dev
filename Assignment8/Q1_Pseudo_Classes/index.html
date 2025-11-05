@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pseudo-Classes Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>Pseudo-Classes Demonstration</h1>
+  </header>
+  <main>
+    <section class="row">
+      <article class="card">
+        <h2>:hover</h2>
+        <p>Hover over elements to see visual change.</p>
+        <a class="demo-link" href="#">Hover Link</a>
+        <button class="demo-btn">Hover Button</button>
+        <ul class="demo-list hover-list">
+          <li>Item One</li>
+          <li>Item Two</li>
+          <li>Item Three</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h2>:focus</h2>
+        <p>Focus the input or button using click or Tab.</p>
+        <input class="demo-input" type="text" placeholder="Focus me">
+        <button class="demo-btn">Focus me</button>
+      </article>
+      <article class="card">
+        <h2>:active</h2>
+        <p>Press and hold to see the active state.</p>
+        <a class="demo-link" href="#">Active Link</a>
+        <button class="demo-btn">Active Button</button>
+      </article>
+      <article class="card">
+        <h2>:nth-child()</h2>
+        <p>Different styles based on item position.</p>
+        <ul class="demo-list nth-list">
+          <li>First</li>
+          <li>Second</li>
+          <li>Third</li>
+          <li>Fourth</li>
+          <li>Fifth</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+  <footer>
+    <p>End of examples</p>
+  </footer>
+</body>
+
+</html>
