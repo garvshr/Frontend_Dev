@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Q7 Login Form Validation</title>
+  <style>
+    label {
+      display: block;
+      margin-top: 8px;
+    }
+    input {
+      display: block;
+      margin-top: 4px;
+      padding: 4px;
+    }
+    .error-msg {
+      color: red;
+      font-size: 0.85rem;
+    }
+    #loginMsg {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Login</h1>
+  <form id="loginForm" novalidate>
+    <label>Username
+      <input type="text" id="loginUser">
+    </label>
+    <div id="userErr" class="error-msg"></div>
+
+    <label>Password
+      <input type="password" id="loginPass">
+    </label>
+    <div id="passErr" class="error-msg"></div>
+
+    <button type="submit">Login</button>
+  </form>
+  <div id="loginMsg"></div>
+  <script src="q7.js"></script>
+</body>
+</html>

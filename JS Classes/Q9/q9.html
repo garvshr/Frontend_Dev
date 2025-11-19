@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Q9 Shopping Cart</title>
+  <style>
+    label {
+      display: block;
+      margin-top: 8px;
+    }
+    input {
+      display: block;
+      margin-top: 4px;
+      padding: 4px;
+    }
+    #itemsList {
+      margin-top: 10px;
+    }
+    .item {
+      margin-bottom: 4px;
+    }
+    #totals {
+      margin-top: 12px;
+    }
+    #couponMsg {
+      color: red;
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Shopping Cart</h1>
+
+  <form id="itemForm" novalidate>
+    <label>Item Name
+      <input type="text" id="itemName">
+    </label>
+    <label>Price
+      <input type="number" id="itemPrice" min="0">
+    </label>
+    <label>Quantity
+      <input type="number" id="itemQty" min="1">
+    </label>
+    <button type="submit">Add Item</button>
+  </form>
+
+  <div id="itemsList"></div>
+
+  <div style="margin-top: 12px;">
+    <label>Coupon Code
+      <input type="text" id="couponCode" placeholder="SAVE20 or DISC10">
+    </label>
+    <button id="applyCouponBtn">Apply Coupon</button>
+    <div id="couponMsg"></div>
+  </div>
+
+  <div id="totals"></div>
+
+  <script src="q9.js"></script>
+</body>
+</html>

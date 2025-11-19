@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Q10 Resume Builder</title>
+  <style>
+    label {
+      display: block;
+      margin-top: 8px;
+    }
+    input, textarea {
+      display: block;
+      margin-top: 4px;
+      padding: 4px;
+      width: 300px;
+      max-width: 100%;
+    }
+    .error-msg {
+      color: red;
+      font-size: 0.85rem;
+    }
+    #jsonOutput {
+      margin-top: 12px;
+      white-space: pre-wrap;
+      font-family: monospace;
+      border: 1px solid #ccc;
+      padding: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Resume Builder</h1>
+  <form id="resumeForm" novalidate>
+    <label>Name
+      <input type="text" id="resName">
+    </label>
+
+    <label>Email
+      <input type="text" id="resEmail">
+    </label>
+    <div id="emailErr10" class="error-msg"></div>
+
+    <label>Skills (comma separated)
+      <textarea id="resSkills" rows="3"></textarea>
+    </label>
+
+    <label>GitHub URL
+      <input type="text" id="resGithub">
+    </label>
+    <div id="githubErr" class="error-msg"></div>
+
+    <label>LinkedIn URL
+      <input type="text" id="resLinkedin">
+    </label>
+    <div id="linkedinErr" class="error-msg"></div>
+
+    <button type="submit">Build Resume Object</button>
+  </form>
+
+  <div id="jsonOutput"></div>
+
+  <script src="q10.js"></script>
+</body>
+</html>

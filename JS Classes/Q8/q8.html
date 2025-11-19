@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Q8 Dynamic Object Updater</title>
+  <style>
+    label {
+      display: block;
+      margin-top: 8px;
+    }
+    input {
+      display: block;
+      margin-top: 4px;
+      padding: 4px;
+    }
+    #userDisplay {
+      margin-top: 12px;
+      white-space: pre-wrap;
+      font-family: monospace;
+      border: 1px solid #ccc;
+      padding: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>User Object Updater</h1>
+  <form id="userForm" novalidate>
+    <label>Name
+      <input type="text" id="userName">
+    </label>
+    <label>Email
+      <input type="text" id="userEmail">
+    </label>
+    <label>Age
+      <input type="number" id="userAge">
+    </label>
+    <button type="submit">Update</button>
+  </form>
+  <div id="userDisplay"></div>
+  <script src="q8.js"></script>
+</body>
+</html>

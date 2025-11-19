@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Q3 Library Management</title>
+  <style>
+    .book-list {
+      margin-top: 10px;
+    }
+    .book-item {
+      margin-bottom: 4px;
+    }
+    .msg {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Library Management</h1>
+  <div>
+    <h3>Available Books</h3>
+    <div id="availableBooks" class="book-list"></div>
+  </div>
+
+  <h3>Issue Book</h3>
+  <form id="issueForm" novalidate>
+    <label>ISBN
+      <input type="text" id="isbnInput">
+    </label>
+    <button type="submit">Issue</button>
+  </form>
+  <div id="issueMsg" class="msg"></div>
+
+  <script src="q3.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Q2 Student Form</title>
+  <style>
+    .error-msg {
+      color: red;
+      font-size: 0.85rem;
+    }
+    .success {
+      color: green;
+      margin-top: 10px;
+    }
+    input {
+      display: block;
+      margin-bottom: 4px;
+      padding: 4px;
+    }
+    label {
+      margin-top: 8px;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <h1>Student Registration</h1>
+  <form id="studentForm" novalidate>
+    <label>Name
+      <input type="text" id="name">
+    </label>
+    <div id="nameError" class="error-msg"></div>
+
+    <label>Email
+      <input type="text" id="email">
+    </label>
+    <div id="emailError" class="error-msg"></div>
+
+    <label>Phone
+      <input type="text" id="phone">
+    </label>
+    <div id="phoneError" class="error-msg"></div>
+
+    <label>Password
+      <input type="password" id="password">
+    </label>
+    <div id="passwordError" class="error-msg"></div>
+
+    <button type="submit">Register</button>
+  </form>
+  <div id="formMsg"></div>
+  <script src="q2.js"></script>
+</body>
+</html>
