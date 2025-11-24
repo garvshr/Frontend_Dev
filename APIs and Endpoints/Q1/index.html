@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Live Search</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#search").keyup(function(){
+    var q = $(this).val();
+    $("#loading").show();
+    $("#results").empty();
+    if(q == "") {
+      $("#loading").hide();
+      return;
+    }
+    $.ajax({
+      url: "http://localhost:3001/products",
+      data: {q: q},
+      type: "GET",
+      success: function(data){
+        $("#loading").hide();
+        if(data.length == 0){
+          $("#results").append("<p>No products found</p>");
+        } else {
+          $.each(data, function(i, product){
+            $("#results").append(`<div><img src="${product.image}" width="50"><span>${product.name} - $${product.price}</span></div>`);
+          });
+        }
+      }
+    });
+  });
+});
+</script>
+</head>
+<body>
+<input id="search" type="text" placeholder="Search products">
+<div id="loading" style="display:none;">Loading...</div>
+<div id="results"></div>
+</body>
+</html>

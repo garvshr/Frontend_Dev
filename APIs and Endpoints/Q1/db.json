@@ -1,0 +1,9 @@
+{
+  "products": [
+    {"id":1, "name":"Apple", "price":1.5, "image":"apple.jpg"},
+    {"id":2, "name":"Banana", "price":0.5, "image":"banana.jpg"},
+    {"id":3, "name":"Orange", "price":1.0, "image":"orange.jpg"},
+    {"id":4, "name":"Grapes", "price":2.0, "image":"grapes.jpg"},
+    {"id":5, "name":"Strawberry", "price":3.0, "image":"strawberry.jpg"}
+  ]
+}

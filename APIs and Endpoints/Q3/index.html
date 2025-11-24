@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Task Manager</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+function loadTasks(filter) {
+  var url = "http://localhost:3003/tasks";
+  if(filter == "completed") {
+    url += "?completed=true";
+  } else if(filter != "all") {
+    url += "?priority=" + filter;
+  }
+  $.ajax({
+    url: url,
+    type: "GET",
+    success: function(data){
+      $("#tasks").empty();
+      $.each(data, function(i, task){
+        var checked = task.completed ? "checked" : "";
+        $("#tasks").append(`<li>${task.title} (${task.priority}) <input type="checkbox" ${checked} onclick="toggleCompleted(${task.id}, this)"></li>`);
+      });
+    }
+  });
+}
+$(document).ready(function(){
+  loadTasks("all");
+  $("#filter").change(function(){
+    loadTasks($(this).val());
+  });
+});
+function toggleCompleted(id, chk) {
+  var completed = chk.checked;
+  $.ajax({
+    url: "http://localhost:3003/tasks/" + id,
+    type: "PATCH",
+    data: JSON.stringify({completed: completed}),
+    contentType: "application/json"
+  });
+}
+</script>
+</head>
+<body>
+<select id="filter">
+  <option value="all">All</option>
+  <option value="low">Low Priority</option>
+  <option value="medium">Medium Priority</option>
+  <option value="high">High Priority</option>
+  <option value="completed">Completed</option>
+</select>
+<ul id="tasks"></ul>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "timetable": [
+    {"id":1, "day":"Monday", "subject":"Math", "faculty":"Dr. A", "time":"9:00 AM"},
+    {"id":2, "day":"Monday", "subject":"Physics", "faculty":"Dr. B", "time":"10:00 AM"},
+    {"id":3, "day":"Tuesday", "subject":"Chemistry", "faculty":"Dr. C", "time":"9:00 AM"},
+    {"id":4, "day":"Wednesday", "subject":"Biology", "faculty":"Dr. D", "time":"9:00 AM"},
+    {"id":5, "day":"Thursday", "subject":"History", "faculty":"Dr. E", "time":"9:00 AM"},
+    {"id":6, "day":"Friday", "subject":"Art", "faculty":"Dr. F", "time":"9:00 AM"}
+  ]
+}

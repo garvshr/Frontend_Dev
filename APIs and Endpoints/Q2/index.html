@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Employee Dashboard</title>
+<script>
+window.onload = function() {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', 'http://localhost:3002/employees');
+  xhr.onload = function() {
+    if (xhr.status === 200) {
+      var employees = JSON.parse(xhr.responseText);
+      var container = document.getElementById('employees');
+      employees.forEach(function(emp) {
+        var div = document.createElement('div');
+        div.innerHTML = emp.name + ' - ' + emp.status + ' <button onclick="toggleStatus(' + emp.id + ', '' + emp.status + '', this)">Toggle</button>';
+        container.appendChild(div);
+      });
+    }
+  };
+  xhr.send();
+};
+function toggleStatus(id, current, btn) {
+  var newStatus = current === 'active' ? 'inactive' : 'active';
+  var oldText = btn.parentNode.innerHTML;
+  btn.parentNode.innerHTML = oldText.replace(current, newStatus);
+  var xhr = new XMLHttpRequest();
+  xhr.open('PATCH', 'http://localhost:3002/employees/' + id);
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.onload = function() {
+    if (xhr.status !== 200) {
+      btn.parentNode.innerHTML = oldText;
+      alert('Error updating status');
+    }
+  };
+  xhr.onerror = function() {
+    btn.parentNode.innerHTML = oldText;
+    alert('Error updating status');
+  };
+  xhr.send(JSON.stringify({status: newStatus}));
+}
+</script>
+</head>
+<body>
+<div id="employees"></div>
+</body>
+</html>

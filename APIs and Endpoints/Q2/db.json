@@ -1,0 +1,9 @@
+{
+  "employees": [
+    {"id":1, "name":"John Doe", "status":"active"},
+    {"id":2, "name":"Jane Smith", "status":"inactive"},
+    {"id":3, "name":"Alice Johnson", "status":"active"},
+    {"id":4, "name":"Bob Brown", "status":"inactive"},
+    {"id":5, "name":"Charlie Davis", "status":"active"}
+  ]
+}

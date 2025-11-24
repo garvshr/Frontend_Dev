@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard</title>
+<script>
+window.onload = function() {
+  var base = 'http://localhost:3004/';
+  document.getElementById('users').innerHTML = 'Loading...';
+  document.getElementById('orders').innerHTML = 'Loading...';
+  document.getElementById('products').innerHTML = 'Loading...';
+  var pUsers = fetch(base + 'users').then(r => { if(!r.ok) throw new Error(); return r.json(); }).catch(() => null);
+  var pOrders = fetch(base + 'orders').then(r => { if(!r.ok) throw new Error(); return r.json(); }).catch(() => null);
+  var pProducts = fetch(base + 'products').then(r => { if(!r.ok) throw new Error(); return r.json(); }).catch(() => null);
+  Promise.all([pUsers, pOrders, pProducts]).then(([users, orders, products]) => {
+    var hasError = false;
+    document.getElementById('users').innerHTML = users ? users.length : 'N/A';
+    if(!users) hasError = true;
+    document.getElementById('orders').innerHTML = orders ? orders.length : 'N/A';
+    if(!orders) hasError = true;
+    document.getElementById('products').innerHTML = products ? products.length : 'N/A';
+    if(!products) hasError = true;
+    if(hasError) document.getElementById('warning').innerHTML = 'Some data could not be loaded.';
+  });
+};
+</script>
+</head>
+<body>
+<div>Total users: <span id="users"></span></div>
+<div>Total orders: <span id="orders"></span></div>
+<div>Total products: <span id="products"></span></div>
+<div id="warning"></div>
+</body>
+</html>
