@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Form Demo</title>
+</head>
+<body>
+    <h1>Secure Form with Autocomplete Off</h1>
+    <form autocomplete="off">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" required><br><br>
+        
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+        
+        <label for="ssn">Social Security Number:</label><br>
+        <input type="text" id="ssn" name="ssn" required><br><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+    
+    <h2>Security Note</h2>
+    <p>The autocomplete="off" attribute prevents browsers from automatically filling in form fields with previously saved data. This improves security by:</p>
+    <ul>
+        <li>Preventing sensitive information like passwords and SSN from being stored in browser memory</li>
+        <li>Reducing the risk of unauthorized access if someone else uses the same device</li>
+        <li>Protecting user privacy on shared or public computers</li>
+        <li>Preventing accidental data exposure through browser autofill suggestions</li>
+    </ul>
+</body>
+</html>

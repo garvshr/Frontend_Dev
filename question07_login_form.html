@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+</head>
+<body>
+    <h1>Login Form</h1>
+    <form>
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" required><br><br>
+        
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+        
+        <!-- CSRF Token: Cross-Site Request Forgery token is a security mechanism used to prevent malicious websites from performing unauthorized actions on behalf of authenticated users. It validates that form submissions come from legitimate sources by including a unique token that must match the server's stored token. -->
+        <input type="hidden" name="csrf_token" value="abc123xyz456token789">
+        
+        <input type="submit" value="Login">
+    </form>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with Iframe</title>
+</head>
+<body>
+    <h1>Submit Your Information</h1>
+    <form action="question17_result.html" method="get" target="resultFrame">
+        <label for="usertext">Enter Text:</label><br>
+        <input type="text" id="usertext" name="usertext" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    
+    <h2>Result:</h2>
+    <iframe name="resultFrame" width="100%" height="200" title="Result Frame" frameborder="1"></iframe>
+</body>
+</html>
