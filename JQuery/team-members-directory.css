@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #8E2DE2 0%, #4A00E0 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+h1 {
+    text-align: center;
+    color: #8E2DE2;
+    margin-bottom: 30px;
+}
+
+.departments {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.department {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #8E2DE2;
+    cursor: pointer;
+}
+
+.department h2 {
+    color: #8E2DE2;
+    margin-bottom: 15px;
+}
+
+.manager, .employee {
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border-left: 4px solid #8E2DE2;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.manager {
+    border-left-color: #4A00E0;
+    font-weight: bold;
+}
+
+.employee:hover, .manager:hover {
+    transform: translateX(10px);
+}
+
+.contact {
+    display: none;
+    color: #555;
+    font-size: 14px;
+    margin-top: 10px;
+    font-weight: normal;
+}
+
+.highlighted {
+    background: #fff3cd !important;
+}
+
+.dept-highlighted {
+    background: #d4edda !important;
+}
+
+#collapseAll {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #8E2DE2 0%, #4A00E0 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#collapseAll:hover {
+    transform: scale(1.02);
+}

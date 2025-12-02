@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Blog Posts</title>
+    <link rel="stylesheet" href="dynamic-blog-posts.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Blog Admin Panel</h1>
+        <div class="controls">
+            <button id="addPost">Add New Post</button>
+            <button id="prependPost">Prepend Featured Post</button>
+            <button id="removeLastPost">Remove Last Post</button>
+            <input type="text" id="searchKeyword" placeholder="Highlight keyword">
+            <button id="highlightKeyword">Highlight</button>
+        </div>
+        <div class="posts">
+            <div class="post">
+                <h3>Getting Started with jQuery</h3>
+                <p>Learn the basics of jQuery library</p>
+                <div class="tags">
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">jQuery</span>
+                </div>
+            </div>
+            <div class="post">
+                <h3>CSS Grid Layout Guide</h3>
+                <p>Master modern CSS Grid techniques</p>
+                <div class="tags">
+                    <span class="tag">CSS</span>
+                    <span class="tag">Layout</span>
+                </div>
+            </div>
+            <div class="post">
+                <h3>React Hooks Explained</h3>
+                <p>Understanding useState and useEffect</p>
+                <div class="tags">
+                    <span class="tag">React</span>
+                    <span class="tag">Hooks</span>
+                </div>
+            </div>
+            <div class="post">
+                <h3>Node.js Best Practices</h3>
+                <p>Write efficient backend code</p>
+                <div class="tags">
+                    <span class="tag">Node.js</span>
+                    <span class="tag">Backend</span>
+                </div>
+            </div>
+            <div class="post">
+                <h3>Web Performance Optimization</h3>
+                <p>Speed up your website loading</p>
+                <div class="tags">
+                    <span class="tag">Performance</span>
+                    <span class="tag">Optimization</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="dynamic-blog-posts.js"></script>
+</body>
+</html>

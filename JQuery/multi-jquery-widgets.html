@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi jQuery Widgets</title>
+    <link rel="stylesheet" href="multi-jquery-widgets.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Dashboard - Multi jQuery Versions</h1>
+        
+        <div class="carousel widget">
+            <h2>Image Carousel (jQuery v1)</h2>
+            <div class="carousel-container">
+                <div class="carousel-item active">Slide 1</div>
+                <div class="carousel-item">Slide 2</div>
+                <div class="carousel-item">Slide 3</div>
+                <div class="carousel-item">Slide 4</div>
+                <div class="carousel-item">Slide 5</div>
+            </div>
+            <button id="prevSlide">Previous</button>
+            <button id="nextSlide">Next</button>
+        </div>
+        
+        <div class="modal-section widget">
+            <h2>Notifications (jQuery v2)</h2>
+            <button id="openModal">Open Modal</button>
+        </div>
+        
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Notification</h3>
+                <p>This is a modal popup using jQuery v2!</p>
+            </div>
+        </div>
+        
+        <div class="widgets-list">
+            <div class="widget-item" data-tooltip="Widget 1 Info">Widget 1</div>
+            <div class="widget-item" data-tooltip="Widget 2 Info">Widget 2</div>
+            <div class="widget-item" data-tooltip="Widget 3 Info">Widget 3</div>
+            <div class="widget-item" data-tooltip="Widget 4 Info">Widget 4</div>
+            <div class="widget-item" data-tooltip="Widget 5 Info">Widget 5</div>
+        </div>
+        
+        <div class="tooltip">Tooltip text</div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>var $j1 = jQuery.noConflict(true);</script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>var $j2 = jQuery.noConflict(true);</script>
+    <script src="multi-jquery-widgets.js"></script>
+</body>
+</html>

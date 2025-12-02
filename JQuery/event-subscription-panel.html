@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Subscription Panel</title>
+    <link rel="stylesheet" href="event-subscription-panel.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Event Subscription Manager</h1>
+        <div class="subscription-list">
+            <div class="subscription-item">
+                <h3>Newsletter</h3>
+                <button class="subscribe">Subscribe</button>
+            </div>
+            <div class="subscription-item">
+                <h3>Product Updates</h3>
+                <button class="subscribe">Subscribe</button>
+            </div>
+            <div class="subscription-item">
+                <h3>Special Offers</h3>
+                <button class="subscribe">Subscribe</button>
+            </div>
+            <div class="subscription-item">
+                <h3>Blog Posts</h3>
+                <button class="subscribe">Subscribe</button>
+            </div>
+            <div class="subscription-item">
+                <h3>Weekly Digest</h3>
+                <button class="subscribe">Subscribe</button>
+            </div>
+        </div>
+        <div class="add-subscription">
+            <input type="text" id="newTopic" placeholder="Enter new topic">
+            <button id="addTopic">Add Topic</button>
+        </div>
+        <div id="message"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="event-subscription-panel.js"></script>
+</body>
+</html>
